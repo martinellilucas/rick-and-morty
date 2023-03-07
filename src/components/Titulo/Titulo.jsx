@@ -2,7 +2,7 @@ import style from "./Titulo.module.css";
 
 const Titulo = () => {
   return (
-    <div>
+    <div className={style.titleContainer}>
       <div className={style.title}>
         Rick<span className={style.span}>and</span>Morty
       </div>

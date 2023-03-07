@@ -1,0 +1,38 @@
+.input {
+  font-family: "Lucida Console";
+  font-size: 1em;
+  text-align: center;
+  border: #ebe480 solid 2px;
+  border-radius: 30px;
+  background-color: black;
+  color: #08bae3;
+}
+.input:hover {
+  background-color: rgb(12, 15, 15);
+}
+.button {
+  font-family: "Lucida Console";
+  font-size: 1em;
+  border: #ebe480 solid 3px;
+  width: 60px;
+  height: max-content;
+  border-radius: 30px;
+  background-color: black;
+  color: #08bae3;
+}
+.button:hover {
+  background-color: cadetblue;
+}
+
+@media screen and (max-width: 500px) {
+  .input {
+    width: fit-content;
+    height: fit-content;
+    font-size: 0.8em;
+  }
+  .button {
+    font-size: 0.8em;
+    height: max-content;
+    width: 50px;
+  }
+}

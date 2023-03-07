@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: #ebe480 solid 5px;
+  background-color: black;
+  border-radius: 30px;
+  width: 550px;
+  height: 250px;
+  margin: 50px;
+}
+
+.descriptionContainer {
+  margin: 10px;
+  width: 55%;
+  height: 50%;
+  font-family: "Lucida Console";
+  font-size: 0.8em;
+  color: #08bae3;
+}
+.description {
+  margin-left: 20px;
+  margin-top: 40px;
+}
+.image {
+  border: #08bae3 solid 5px;
+  width: 45%;
+  height: 90%;
+  border-radius: 50%;
+}
+
+.button {
+  background-color: black;
+  color: whitesmoke;
+  font-family: "Lucida Console";
+  font-size: 1em;
+  height: max-content;
+  width: max-content;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.button:hover {
+  color: red;
+}
+/* font-family: "Get Schwifty";
+color: #0a2e25; */
+@media screen and (max-width: 500px) {
+  .container {
+    width: 70%;
+    height: 70%;
+    border-radius: 30px;
+  }
+  .button {
+    height: 20px;
+    width: 20px;
+    font-size: 0.5em;
+  }
+  .image {
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .descriptionContainer {
+    width: max-content;
+    height: max-content;
+  }
+  .description {
+    font-size: 0.5em;
+    margin-left: 2px;
+    margin-top: 16px;
+  }
+}
