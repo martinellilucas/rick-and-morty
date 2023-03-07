@@ -1,3 +1,20 @@
 .App {
-   text-align: center;
+  text-align: center;
+  background-color: #a6cccc;
+  font-family: "Get Schwifty";
+  color: #0a2e25;
+}
+.separador {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 15px;
+  border: 2px solid #60a85f;
+  border-radius: 3px;
+}
+
+@font-face {
+  font-family: "Get Schwifty";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/3089507/get-schwifty.woff")
+    format("woff");
 }
