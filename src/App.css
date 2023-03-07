@@ -1,4 +1,5 @@
 .App {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,10 +10,4 @@
   font-family: "Get Schwifty";
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/3089507/get-schwifty.woff")
     format("woff");
-}
-
-@media screen and (max-width: 500px) {
-  .App {
-    width: 80%;
-  }
 }
