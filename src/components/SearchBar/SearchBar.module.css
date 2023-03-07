@@ -6,6 +6,7 @@
   border-radius: 30px;
   background-color: black;
   color: #08bae3;
+  box-shadow: 0 5px 10px rgb(255, 255, 255);
 }
 .input:hover {
   background-color: cadetblue;
@@ -20,6 +21,7 @@
   border-radius: 30px;
   background-color: black;
   color: #08bae3;
+  box-shadow: 0 5px 10px rgb(255, 255, 255);
 }
 
 .button:hover {
