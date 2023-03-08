@@ -1,6 +1,6 @@
 import style from "./Card.module.css";
 
-export default function Card({ name, species, gender, image, onClose }) {
+export default function Card({ id, name, species, gender, image, close }) {
   return (
     <div className={style.container}>
       <div className={style.card}>
@@ -8,7 +8,12 @@ export default function Card({ name, species, gender, image, onClose }) {
           <img className={style.img} src={image} alt="" />
         </div>
         <div className={style.content}>
-          <button className={style.button} onClick={onClose}>
+          <button
+            className={style.button}
+            onClick={() => {
+              close(id);
+            }}
+          >
             X
           </button>
           <h2 className={style.description}>~ NAME: {name}</h2>

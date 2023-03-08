@@ -2,16 +2,12 @@
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 1.2em;
   color: #fff765;
+  text-shadow: 5px 5px 15px white;
 }
 
 .container {
-  position: relative;
-  width: 1100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: warp;
-  padding: 30px;
+  width: 350px;
+  padding: 10px;
 }
 .container .card {
   position: relative;

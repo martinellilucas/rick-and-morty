@@ -2,7 +2,7 @@
   position: absolute;
   width: min-content;
   height: min-content;
-  top: 30%;
+  top: 20%;
   left: 35%;
   bottom: 0;
   right: 0;
@@ -21,7 +21,7 @@
   position: absolute;
   width: min-content;
   height: min-content;
-  top: 30%;
+  top: 20%;
   left: 35%;
   bottom: 0;
   right: 0;
@@ -34,7 +34,7 @@
   position: absolute;
   width: min-content;
   height: min-content;
-  top: 30%;
+  top: 20%;
   left: 35%;
   bottom: 0;
   right: 0;
@@ -42,6 +42,23 @@
   font-size: 8em;
   -webkit-text-stroke: 0.4em black;
   z-index: 23;
+}
+@media screen and (max-width: 1200px) {
+  .title {
+    width: min-content;
+    font-size: 8em;
+    left: 16%;
+  }
+  .middle {
+    width: min-content;
+    font-size: 8em;
+    left: 16%;
+  }
+  .bottom {
+    width: min-content;
+    font-size: 8em;
+    left: 16%;
+  }
 }
 @media screen and (max-width: 800px) {
   .title {
@@ -64,16 +81,16 @@
   .title {
     width: min-content;
     font-size: 4em;
-    left: 12%;
+    left: 20%;
   }
   .middle {
     width: min-content;
     font-size: 4em;
-    left: 12%;
+    left: 20%;
   }
   .bottom {
     width: min-content;
     font-size: 4em;
-    left: 12%;
+    left: 20%;
   }
 }

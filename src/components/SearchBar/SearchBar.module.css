@@ -1,12 +1,20 @@
+.searchContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 30%;
+  background-color: red;
+  box-shadow: 0 5px 10px rgb(255, 255, 255);
+}
 .input {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 1em;
   text-align: center;
   border: #ebe480 solid 2px;
-  border-radius: 30px;
   background-color: black;
   color: #08bae3;
-  box-shadow: 0 5px 10px rgb(255, 255, 255);
 }
 .input:hover {
   background-color: cadetblue;
@@ -16,12 +24,8 @@
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 1em;
   border: #ebe480 solid 3px;
-  width: 60px;
-  height: max-content;
-  border-radius: 30px;
   background-color: black;
   color: #08bae3;
-  box-shadow: 0 5px 10px rgb(255, 255, 255);
 }
 
 .button:hover {
@@ -31,13 +35,9 @@
 
 @media screen and (max-width: 500px) {
   .input {
-    width: fit-content;
-    height: fit-content;
     font-size: 0.8em;
   }
   .button {
     font-size: 0.8em;
-    height: max-content;
-    width: 50px;
   }
 }
