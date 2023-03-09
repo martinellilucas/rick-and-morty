@@ -1,13 +1,13 @@
 import Card from "../Card/Card";
 import style from "./Cards.module.css";
 
-export default function Cards(props) {
+export default function Cards({ characters, close }) {
   return (
     <div className={style.cardsContainer}>
-      {props.characters.map(({ id, name, species, gender, image }) => {
+      {characters.map(({ id, name, species, gender, image }) => {
         return (
           <Card
-            close={props.close}
+            close={close}
             id={id}
             name={name}
             species={species}

@@ -1,9 +1,9 @@
 import SearchBar from "../SearchBar/SearchBar";
 import style from "./Nav.module.css";
-export default function Nav(props) {
+export default function Nav({ onSearch }) {
   return (
     <div className={style.nav}>
-      <SearchBar onSearch={props.onSearch}></SearchBar>
+      <SearchBar onSearch={onSearch}></SearchBar>
     </div>
   );
 }
