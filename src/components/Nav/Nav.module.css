@@ -13,12 +13,14 @@
   text-decoration: none;
   display: flex;
   flex-direction: row;
-  padding: 3px;
+  justify-content: space-between;
+  padding: 5px;
 }
 .separador {
   border: white solid 1px;
   margin-left: 10px;
   margin-right: 10px;
+  box-shadow: 3px 2px 10px black;
 }
 
 .menuText {
@@ -32,4 +34,15 @@
 .menuText:hover {
   font-size: 1.36em;
   text-shadow: 5px 5px 10px black;
+}
+.logo {
+  margin-right: 10px;
+  height: 30px;
+  width: 30px;
+  box-shadow: 3px 2px 10px black;
+  border-radius: 50%;
+}
+.logo:hover {
+  height: 31px;
+  width: 31px;
 }

@@ -1,0 +1,7 @@
+.frase {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 0.8em;
+  color: white;
+  margin-top: 250px;
+  text-shadow: 3px 3px 8px rgb(3, 3, 3);
+}

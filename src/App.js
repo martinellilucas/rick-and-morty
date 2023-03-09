@@ -4,10 +4,11 @@ import Portal from "./components/Portal/Portal";
 import Titulo from "./components/Titulo/Titulo";
 import Nav from "./components/Nav/Nav";
 import { useState } from "react";
-import { Route, BrowserRouter, Routes, Router } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import About from "./components/About/About";
 import Detail from "./components/Detail/Detail";
-
+import Index from "./components/Index/Index";
+import Footer from "./components/Footer/Footer";
 function App() {
   const [characters, setCharacters] = useState([]);
   const onSearch = (character) => {
@@ -37,6 +38,7 @@ function App() {
       <Titulo />
       <Nav onSearch={onSearch} />
       <Routes>
+        <Route path="" element={<Index />} />
         <Route
           path="/home"
           element={<Cards characters={characters} close={close} />}
@@ -44,6 +46,7 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/detail/:detailId" element={<Detail />}></Route>
       </Routes>
+      <Footer />
     </div>
   );
 }

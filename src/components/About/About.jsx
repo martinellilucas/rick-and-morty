@@ -11,10 +11,18 @@ const About = () => {
         Esta aplicación fue desarrollada por Lucas Martinelli, durante el
         bootcamp Soy Henry...
       </p>
+      <hr className={styles.separator} />
+      <p className={styles.text}>
+        This site is a dynamic and responsive application, which allows us to
+        make requests to an API, to generate cards with characters from the Rick
+        & Morty series, using the information provided by this API. This
+        application was developed by Lucas Martinelli, during the bootcamp Soy
+        Henry...
+      </p>
+      <hr className={styles.separator} />
       <a className={styles.link} href="https://github.com/martinellilucas">
         GitHub
       </a>
-      <hr className={styles.separator} />
     </div>
   );
 };

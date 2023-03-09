@@ -14,7 +14,7 @@ const Detail = () => {
       .then((res) => res.json())
       .then((char) => {
         if (char.name) {
-          setCharacter(char);
+          setCharacter({ ...char });
         }
       })
       .catch((err) => {
@@ -26,10 +26,11 @@ const Detail = () => {
       <div className={style.descriptionContainer}>
         <h1 className={style.name}>Nombre: {character.name}</h1>
         <h4 className={style.text}>Status: {character.status}</h4>
-        <h4 className={style.text}>Specie: {character.specie}</h4>
+        <h4 className={style.text}>Specie: {character.species}</h4>
         <h4 className={style.text}>Gender: {character.gender}</h4>
-        <h4 className={style.text}>Origin: {character.origin}</h4>
+        <h4 className={style.text}>Origin: {character.origin?.name}</h4>
       </div>
+      <hr className={style.separator} />
       <div className={style.imgContainer}>
         <img className={style.image} src={character.image} alt=""></img>
       </div>
