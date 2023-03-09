@@ -1,5 +1,5 @@
 import style from "./Card.module.css";
-
+import { Link } from "react-router-dom";
 export default function Card({ id, name, species, gender, image, close }) {
   return (
     <div className={style.container}>
@@ -16,7 +16,9 @@ export default function Card({ id, name, species, gender, image, close }) {
           >
             X
           </button>
-          <h2 className={style.description}>~ NAME: {name}</h2>
+          <Link to={`/detail/${id}`}>
+            <h2 className={style.description}>~ NAME: {name}</h2>
+          </Link>
           <h2 className={style.description}>~ SPECIE: {species}</h2>
           <h2 className={style.description}>~ GENDER: {gender}</h2>
         </div>

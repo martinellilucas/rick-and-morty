@@ -57,7 +57,7 @@
 .button {
   background-color: black;
   color: whitesmoke;
-  font-family: "Lucida Console";
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 1em;
   height: max-content;
   width: max-content;

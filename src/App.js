@@ -4,6 +4,9 @@ import Portal from "./components/Portal/Portal";
 import Titulo from "./components/Titulo/Titulo";
 import Nav from "./components/Nav/Nav";
 import { useState } from "react";
+import { Route, BrowserRouter, Routes, Router } from "react-router-dom";
+import About from "./components/About/About";
+import Detail from "./components/Detail/Detail";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -33,7 +36,14 @@ function App() {
       <Portal />
       <Titulo />
       <Nav onSearch={onSearch} />
-      <Cards characters={characters} close={close} />
+      <Routes>
+        <Route
+          path="/home"
+          element={<Cards characters={characters} close={close} />}
+        ></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/detail/:detailId" element={<Detail />}></Route>
+      </Routes>
     </div>
   );
 }
