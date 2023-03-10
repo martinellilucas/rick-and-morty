@@ -55,11 +55,11 @@
     width: 90%;
   }
   .input {
-    width: 70%;
+    width: 50%;
     font-size: 0.8em;
   }
   .button {
-    width: 30%;
+    width: 35%;
     font-size: 0.8em;
   }
 }

@@ -17,7 +17,7 @@ export default function Card({ id, name, species, gender, image, close }) {
             X
           </button>
           <Link to={`/detail/${id}`}>
-            <h2 className={style.description}>~ NAME: {name}</h2>
+            <h2 className={style.name}>~ NAME: {name}</h2>
           </Link>
           <h2 className={style.description}>~ SPECIE: {species}</h2>
           <h2 className={style.description}>~ GENDER: {gender}</h2>

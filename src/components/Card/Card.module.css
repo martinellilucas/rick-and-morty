@@ -5,7 +5,17 @@
   text-shadow: 5px 5px 15px rgb(3, 3, 3);
   text-align: left;
 }
-
+.name {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 1.2em;
+  color: #ffffff;
+  text-shadow: 5px 5px 15px rgb(3, 3, 3);
+  text-align: left;
+  text-decoration: underline white;
+}
+.name:visited {
+  color: white;
+}
 .container {
   width: 255px;
   padding: 55px;
@@ -75,5 +85,11 @@ color: #0a2e25; */
     width: 50%;
     height: 50%;
     margin: 40px;
+  }
+  .name {
+    font-size: 1.1em;
+  }
+  .description {
+    font-size: 1.1em;
   }
 }
