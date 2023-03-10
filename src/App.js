@@ -9,6 +9,8 @@ import About from "./components/About/About";
 import Detail from "./components/Detail/Detail";
 import Index from "./components/Index/Index";
 import Footer from "./components/Footer/Footer";
+import Error from "./components/Error/Error";
+
 function App() {
   const [characters, setCharacters] = useState([]);
   const onSearch = (character) => {
@@ -32,6 +34,7 @@ function App() {
   const close = (id) => {
     setCharacters(characters.filter((char) => char.id !== id));
   };
+
   return (
     <div className={styles.App}>
       <Portal />
@@ -45,6 +48,7 @@ function App() {
         ></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/detail/:detailId" element={<Detail />}></Route>
+        <Route path="*" element={<Error />}></Route>
       </Routes>
       <Footer />
     </div>

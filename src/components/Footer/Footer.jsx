@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className={style.frase}>
       Developed by{" "}
       <a
-        style={{ textDecoration: "none" }}
+        className={style.link}
         href="https://www.linkedin.com/in/martinellilucas8/"
       >
         Lucas Martinelli.

@@ -1,7 +1,7 @@
 import SearchBar from "../SearchBar/SearchBar";
 import style from "./Nav.module.css";
 import { NavLink } from "react-router-dom";
-import unnamed from "./unnamed.png";
+import unnamed from "../../components/assets/images/logo.png";
 export default function Nav({ onSearch }) {
   return (
     <div className={style.nav}>

@@ -4,4 +4,11 @@
   color: white;
   margin-top: 250px;
   text-shadow: 3px 3px 8px rgb(3, 3, 3);
+  text-decoration: none;
+}
+.link {
+  text-decoration: none;
+}
+.link:visited {
+  color: white;
 }
