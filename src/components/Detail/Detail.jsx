@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import style from "./Detail.module.css";
 const Detail = () => {
   const [character, setCharacter] = useState({});
@@ -36,6 +36,9 @@ const Detail = () => {
           <div className={style.imgContainer}>
             <img className={style.image} src={character.image} alt=""></img>
           </div>
+          <NavLink to="/home">
+            <button className={style.button}>GET ME HOME</button>
+          </NavLink>
         </>
       ) : (
         <>
