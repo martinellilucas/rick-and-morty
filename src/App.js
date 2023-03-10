@@ -3,8 +3,8 @@ import Cards from "./components/Cards/Cards.jsx";
 import Portal from "./components/Portal/Portal";
 import Titulo from "./components/Titulo/Titulo";
 import Nav from "./components/Nav/Nav";
-import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useLocation, Route, Routes } from "react-router-dom";
 import About from "./components/About/About";
 import Detail from "./components/Detail/Detail";
 import Index from "./components/Index/Index";
@@ -12,6 +12,23 @@ import Footer from "./components/Footer/Footer";
 import Error from "./components/Error/Error";
 
 function App() {
+  const [access, setAccess] = useState(false);
+  const username = "martinellilucas8@gmail.com";
+  const password = "pass1234";
+  const navigate = useNavigate();
+  const login = (userData) => {
+    if (userData.password === password && userData.email === username) {
+      setAccess(true);
+      navigate("/home");
+    }
+  };
+  const logOut = () => {
+    setAccess(false);
+    navigate("/");
+  };
+  useEffect(() => {
+    !access && navigate("/");
+  }, [access]);
   const [characters, setCharacters] = useState([]);
   const onSearch = (character) => {
     const url_base = "https://be-a-rym.up.railway.app/api";
@@ -34,14 +51,18 @@ function App() {
   const close = (id) => {
     setCharacters(characters.filter((char) => char.id !== id));
   };
-
+  const location = useLocation();
   return (
     <div className={styles.App}>
       <Portal />
       <Titulo />
-      <Nav onSearch={onSearch} />
+      {location.pathname === "/" ? (
+        <></>
+      ) : (
+        <Nav onSearch={onSearch} logOut={logOut} />
+      )}
       <Routes>
-        <Route path="" element={<Index />} />
+        <Route path="" element={<Index login={login} />} />
         <Route
           path="/home"
           element={<Cards characters={characters} close={close} />}
