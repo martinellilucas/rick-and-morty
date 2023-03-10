@@ -8,20 +8,24 @@ const Form = ({ login }) => {
   const handleChange = (event) => {
     const value = event.target.value;
     const target = event.target.name;
-    console.log(form.password);
+
     setForm({ ...form, [target]: value });
-    validation({ ...form, [target]: value }, error, setError);
+    validation({ ...form, [target]: value }, error, setError, target);
   };
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     login(form);
   };
   return (
-    <form className={style.container} onSubmit={() => handleSubmit()}>
+    <form className={style.container} onSubmit={handleSubmit}>
       <div className={style.section}>
-        <label className={style.label}>Email: </label>
+        <label className={style.label} htmlFor="email">
+          Email:{" "}
+        </label>
         <input
+          type="text"
           value={form.email}
-          onChange={(e) => handleChange(e)}
+          onChange={handleChange}
           name="email"
           placeholder="Ingrese su email"
           className={error.email ? style.error : style.success}
@@ -32,8 +36,11 @@ const Form = ({ login }) => {
       ) : null}
 
       <div className={style.section}>
-        <label className={style.label}>Password: </label>
+        <label className={style.label} htmlFor="password">
+          Password:{" "}
+        </label>
         <input
+          type="password"
           value={form.password}
           placeholder="Password"
           onChange={handleChange}

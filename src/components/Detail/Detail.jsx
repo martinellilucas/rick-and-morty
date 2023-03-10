@@ -22,7 +22,7 @@ const Detail = () => {
       });
   }, [detailId, character]);
   return (
-    <div className={style.container}>
+    <div className={character.name ? style.container : style.loadingContainer}>
       {character.name ? (
         <>
           <div className={style.descriptionContainer}>
@@ -42,7 +42,7 @@ const Detail = () => {
         </>
       ) : (
         <>
-          <h1 className={style.name}>LOADING...</h1>
+          <h1 className={style.loading}>LOADING...</h1>
         </>
       )}
     </div>
