@@ -33,7 +33,7 @@
 }
 
 .menuText:hover {
-  font-size: 1.4em;
+  font-size: 1.2em;
   text-shadow: 5px 5px 10px black;
   transition-delay: 0.2s;
 }
@@ -44,11 +44,6 @@
   box-shadow: 3px 2px 10px black;
   border-radius: 50%;
   transition: 0.2s ease-in-out;
-}
-.logo:hover {
-  height: 35px;
-  width: 35px;
-  transition-delay: 0.2s;
 }
 
 @media screen and (max-width: 581px) {

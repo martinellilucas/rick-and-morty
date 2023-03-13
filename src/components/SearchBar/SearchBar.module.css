@@ -54,11 +54,11 @@
 
 .buttonLeft:hover {
   transition-delay: 0.2s;
-  font-size: 0.9em;
+  font-size: 0.7em;
 }
 .buttonRight:hover {
   transition-delay: 0.2s;
-  font-size: 0.9em;
+  font-size: 0.7em;
 }
 
 @media screen and (max-width: 1400px) {

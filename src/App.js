@@ -28,7 +28,7 @@ function App() {
   };
   useEffect(() => {
     !access && navigate("/");
-  }, [access]);
+  }, [access, navigate]);
   const [characters, setCharacters] = useState([]);
   const onSearch = (character) => {
     const url_base = "https://be-a-rym.up.railway.app/api";
@@ -51,16 +51,12 @@ function App() {
   const close = (id) => {
     setCharacters(characters.filter((char) => char.id !== id));
   };
-  const location = useLocation();
+  const { pathname } = useLocation();
   return (
     <div className={styles.App}>
       <Portal />
       <Titulo />
-      {location.pathname === "/" ? (
-        <></>
-      ) : (
-        <Nav onSearch={onSearch} logOut={logOut} />
-      )}
+      {pathname !== "/" && <Nav onSearch={onSearch} logOut={logOut} />}
       <Routes>
         <Route path="" element={<Index login={login} />} />
         <Route
