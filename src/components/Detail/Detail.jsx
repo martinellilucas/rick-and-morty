@@ -8,8 +8,7 @@ const Detail = () => {
   useEffect(() => {
     const url_base = "https://be-a-rym.up.railway.app/api";
     const key = "a4323caea686.b6efbb9249e0d434a6e8";
-    console.log(detailId);
-    console.log(character);
+
     fetch(`${url_base}/character/${detailId}?key=${key}`)
       .then((res) => res.json())
       .then((char) => {
