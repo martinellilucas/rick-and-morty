@@ -8,13 +8,15 @@ export default function Card({ id, name, species, gender, image, close }) {
   const favorites = useSelector((state) => state.myFavorites);
   const dispatch = useDispatch();
   const [isFav, setIsFav] = useState(false);
+
   useEffect(() => {
     favorites.forEach((fav) => {
       if (fav.id === id) {
         setIsFav(true);
       }
     });
-  }, [favorites]);
+  }, [id, favorites]);
+
   const handleFav = () => {
     if (isFav) {
       setIsFav(false);

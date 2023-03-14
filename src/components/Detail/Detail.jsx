@@ -21,6 +21,7 @@ const Detail = () => {
         window.alert(err);
       });
   }, [detailId, character]);
+
   return (
     <div className={character.name ? style.container : style.loadingContainer}>
       {character.name ? (

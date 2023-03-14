@@ -1,6 +1,7 @@
 import { useState } from "react";
 import style from "./Form.module.css";
 import validation from "./validation";
+
 const Form = ({ login }) => {
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState({ email: "", password: "" });
@@ -12,10 +13,12 @@ const Form = ({ login }) => {
     setForm({ ...form, [target]: value });
     validation({ ...form, [target]: value }, error, setError, target);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     login(form);
   };
+
   return (
     <form className={style.container} onSubmit={handleSubmit}>
       <div className={style.section}>
