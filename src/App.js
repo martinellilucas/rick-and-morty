@@ -16,20 +16,25 @@ function App() {
   const username = "martinellilucas8@gmail.com";
   const password = "pass1234";
   const navigate = useNavigate();
+
   const login = (userData) => {
     if (userData.password === password && userData.email === username) {
       setAccess(true);
       navigate("/home");
     }
   };
+
   const logOut = () => {
     setAccess(false);
     navigate("/");
   };
+
   useEffect(() => {
     !access && navigate("/");
   }, [access, navigate]);
+
   const [characters, setCharacters] = useState([]);
+
   const onSearch = (character) => {
     const url_base = "https://be-a-rym.up.railway.app/api";
     const key = "a4323caea686.b6efbb9249e0d434a6e8";
@@ -51,6 +56,7 @@ function App() {
   const close = (id) => {
     setCharacters(characters.filter((char) => char.id !== id));
   };
+
   const { pathname } = useLocation();
   return (
     <div className={styles.App}>

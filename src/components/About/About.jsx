@@ -1,8 +1,16 @@
 import styles from "./About.module.css";
+import Card from "../Card/Card";
+import imagen from "../assets/images/foto.jpg";
 const About = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>About us: </h1>
+      <Card
+        name="Lucas Martinelli"
+        gender="Male"
+        species="Human"
+        image={imagen}
+      ></Card>
       <hr className={styles.separator} />
       <p className={styles.text}>
         Este sitio es una aplicación dinámina y responsive, que nos permite

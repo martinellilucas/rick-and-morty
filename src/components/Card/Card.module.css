@@ -11,11 +11,8 @@
   color: #ffffff;
   text-shadow: 5px 5px 15px rgb(3, 3, 3);
   text-align: left;
-  text-decoration: underline white;
 }
-.name:visited {
-  color: white;
-}
+
 .container {
   width: 255px;
   padding: 55px;
