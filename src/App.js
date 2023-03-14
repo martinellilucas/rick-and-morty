@@ -10,6 +10,8 @@ import Detail from "./components/Detail/Detail";
 import Index from "./components/Index/Index";
 import Footer from "./components/Footer/Footer";
 import Error from "./components/Error/Error";
+import Favorites from "./components/Favorites/Favorites";
+import Portfolio from "./components/Portfolio/Portfolio";
 
 function App() {
   const [access, setAccess] = useState(false);
@@ -72,6 +74,8 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/detail/:detailId" element={<Detail />}></Route>
         <Route path="*" element={<Error />}></Route>
+        <Route path="/favorites" element={<Favorites />}></Route>
+        <Route path="/portfolio" element={<Portfolio />}></Route>
       </Routes>
       <Footer />
     </div>

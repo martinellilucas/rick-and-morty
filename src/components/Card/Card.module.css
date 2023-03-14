@@ -61,6 +61,11 @@
   opacity: 1;
   transition-delay: 0.2s;
 }
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .button {
   border: 0px;
   background: rgba(116, 188, 185, 0.6);

@@ -10,6 +10,7 @@ const About = () => {
         gender="Male"
         species="Human"
         image={imagen}
+        link={`https://github.com/martinellilucas`}
       ></Card>
       <hr className={styles.separator} />
       <p className={styles.text}>

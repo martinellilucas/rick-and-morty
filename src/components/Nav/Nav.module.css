@@ -46,7 +46,7 @@
   transition: 0.2s ease-in-out;
 }
 
-@media screen and (max-width: 581px) {
+@media screen and (max-width: 781px) {
   .menuText {
     font-size: 0.8em;
     margin: 5px;

@@ -13,8 +13,16 @@ export default function Nav({ onSearch, logOut }) {
           <span className={style.menuText}>Home</span>
         </NavLink>
         <hr className={style.separador} />
+        <NavLink to="/favorites" style={{ textDecoration: "none" }}>
+          <span className={style.menuText}>Favorites</span>
+        </NavLink>
+        <hr className={style.separador} />
         <NavLink to="/about" style={{ textDecoration: "none" }}>
           <span className={style.menuText}>About</span>
+        </NavLink>
+        <hr className={style.separador} />
+        <NavLink to="/portfolio" style={{ textDecoration: "none" }}>
+          <span className={style.menuText}>Portfolio</span>
         </NavLink>
         <hr className={style.separador} />
         <NavLink to="/about" style={{ textDecoration: "none" }}>
