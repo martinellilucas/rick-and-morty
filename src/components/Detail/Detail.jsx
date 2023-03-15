@@ -19,7 +19,7 @@ const Detail = () => {
       .catch((err) => {
         window.alert(err);
       });
-  }, [detailId, character]);
+  }, [detailId]);
 
   return (
     <div className={character.name ? style.container : style.loadingContainer}>

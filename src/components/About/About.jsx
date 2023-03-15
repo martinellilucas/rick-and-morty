@@ -4,7 +4,6 @@ import imagen from "../assets/images/foto.jpg";
 const About = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>About us: </h1>
       <Card
         name="Lucas Martinelli"
         gender="Male"
@@ -12,6 +11,7 @@ const About = () => {
         image={imagen}
         link={`https://github.com/martinellilucas`}
       ></Card>
+      <h1 className={styles.title}>About us: </h1>
       <hr className={styles.separator} />
       <p className={styles.text}>
         Este sitio es una aplicación dinámina y responsive, que nos permite
