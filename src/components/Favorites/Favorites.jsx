@@ -4,10 +4,6 @@ import Card from "../Card/Card";
 import style from "./Favorites.module.css";
 
 class Favorites extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className={style.container}>
@@ -19,6 +15,7 @@ class Favorites extends React.Component {
               species={character.species}
               gender={character.gender}
               image={character.image}
+              close={character.close}
             ></Card>
           );
         })}

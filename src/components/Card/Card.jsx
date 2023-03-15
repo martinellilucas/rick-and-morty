@@ -31,6 +31,7 @@ export default function Card({ id, name, species, gender, image, close }) {
           species: species,
           gender: gender,
           image: image,
+          close: close,
         })
       );
     }
