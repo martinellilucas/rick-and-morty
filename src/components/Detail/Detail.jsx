@@ -1,24 +1,20 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useParams } from "react-router-dom";
+import { addCharDetail, cleanDetail } from "../../redux/actions";
 import style from "./Detail.module.css";
+
 const Detail = () => {
-  const [character, setCharacter] = useState({});
+  const character = useSelector((state) => state.charDetail);
   const { detailId } = useParams();
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const url_base = "https://be-a-rym.up.railway.app/api";
-    const key = "a4323caea686.b6efbb9249e0d434a6e8";
+    dispatch(addCharDetail(detailId));
 
-    fetch(`${url_base}/character/${detailId}?key=${key}`)
-      .then((res) => res.json())
-      .then((char) => {
-        if (char.name) {
-          setCharacter({ ...char });
-        }
-      })
-      .catch((err) => {
-        window.alert(err);
-      });
+    return () => {
+      dispatch(cleanDetail());
+    };
   }, [detailId]);
 
   return (

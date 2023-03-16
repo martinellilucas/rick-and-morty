@@ -10,12 +10,12 @@ class Favorites extends React.Component {
         {this.props.favorites.map((character) => {
           return (
             <Card
+              key={character.id}
               id={character.id}
               name={character.name}
               species={character.species}
               gender={character.gender}
               image={character.image}
-              close={character.close}
             ></Card>
           );
         })}

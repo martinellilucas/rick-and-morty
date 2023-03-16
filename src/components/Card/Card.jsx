@@ -56,19 +56,21 @@ export default function Card({ id, name, species, gender, image, close }) {
               <button className={style.button} onClick={handleFav}>
                 💕
               </button>
-            ) : (
+            ) : id ? (
               <button className={style.button} onClick={handleFav}>
                 🤍
               </button>
-            )}
-            <button
-              className={style.button}
-              onClick={() => {
-                close(id);
-              }}
-            >
-              X
-            </button>
+            ) : null}
+            {close ? (
+              <button
+                className={style.button}
+                onClick={() => {
+                  close(id);
+                }}
+              >
+                X
+              </button>
+            ) : null}
           </div>
           <h2 className={style.name}>~ NAME: {name}</h2>
 

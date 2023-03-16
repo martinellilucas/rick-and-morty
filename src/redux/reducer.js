@@ -1,6 +1,11 @@
-import { ADD_FAVORITE, REMOVE_FAVORITE } from "./actions";
+import {
+  ADD_CHAR_DETAIL,
+  ADD_FAVORITE,
+  CLEAN_DETAIL,
+  REMOVE_FAVORITE,
+} from "./actions";
 
-const initialState = { myFavorites: [] };
+const initialState = { myFavorites: [], charDetail: {} };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
@@ -13,7 +18,10 @@ const reducer = (state = initialState, action) => {
           (char) => char.id !== action.payload
         ),
       };
-
+    case ADD_CHAR_DETAIL:
+      return { ...state, charDetail: { ...action.payload } };
+    case CLEAN_DETAIL:
+      return { ...state, charDetail: {} };
     default:
       return { ...state };
   }
