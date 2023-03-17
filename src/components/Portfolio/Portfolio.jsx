@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../Card/Card";
+
 import style from "./Portfolio.module.css";
 import rick from "../assets/images/rick&morty.png";
 import zaida from "../assets/images/zaida.png";
@@ -24,8 +24,15 @@ class Portfolio extends React.Component {
           </p>
           <hr className={style.separator} />
         </div>
-        <Card name="Rick & Morty API" image={rick}></Card>
-        <Card name="Zaida Ind." image={zaida}></Card>
+        {/*   <NavLink to="https://github.com/martinellilucas/rick-and-morty"></NavLink>
+          <NavLink to="https://github.com/martinellilucas/RJ24895"></Link> */}
+        <a href="https://github.com/martinellilucas">
+          <section className={style.section}>
+            <img className={style.imagen} src={rick} alt="Rick&Morty API" />
+
+            <img className={style.imagen} src={zaida} alt="Tienda Zaida Ind." />
+          </section>
+        </a>
       </div>
     );
   }

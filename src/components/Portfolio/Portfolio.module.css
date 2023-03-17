@@ -29,3 +29,24 @@
   width: 80%;
   margin-left: 10%;
 }
+.section {
+  display: flex;
+  width: 90%;
+  height: 600px;
+  margin: 5%;
+}
+
+.imagen {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5s ease;
+}
+
+.imagen:hover {
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
