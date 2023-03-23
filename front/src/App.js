@@ -40,7 +40,7 @@ function App() {
   const onSearch = (character) => {
     const url_base = "https://localhost:3001/rickandmorty";
 
-    fetch(`${url_base}/onsearch${character}`)
+    fetch(`${url_base}/onsearch/${character}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.name) {

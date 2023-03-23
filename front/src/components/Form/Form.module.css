@@ -1,6 +1,6 @@
 .container {
-  width: 80%;
-  height: 80%;
+  width: max-content;
+  height: max-content;
   padding: 30px;
   box-shadow: 3px 2px 10px rgb(255, 255, 255);
   background: rgba(64, 144, 140, 0.6);
@@ -17,7 +17,9 @@
   color: white;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   text-shadow: 3px 3px 8px rgb(3, 3, 3);
+  transition: 0.2s ease-in-out;
 }
+
 .button {
   background-color: #f96e4d;
   border: 0;
@@ -51,6 +53,11 @@
   box-shadow: 3px 2px 10px rgb(255, 255, 255);
   background: rgba(116, 188, 185, 0.6);
   border: 1px solid #fff;
+  transition: 0.2s ease-in-out;
+}
+.success:hover {
+  background: rgba(192, 216, 215, 0.6);
+  transition-delay: 0.2s;
 }
 .error::placeholder {
   color: rgba(255, 255, 255, 0.308);
