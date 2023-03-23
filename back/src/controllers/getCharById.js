@@ -1,5 +1,6 @@
 const axios = require("axios");
 const { KEY, URL } = process.env;
+
 const successHandler = (response, res) => {
   const { id, species, gender, image, name } = response.data;
   res.writeHead(200, { "Content-Type": "aplication/json" });
