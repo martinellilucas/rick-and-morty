@@ -38,9 +38,9 @@ function App() {
   const [characters, setCharacters] = useState([]);
 
   const onSearch = (character) => {
-    const url_base = "https://be-a-rym.up.railway.app/api";
-    const key = "a4323caea686.b6efbb9249e0d434a6e8";
-    fetch(`${url_base}/character/${character}?key=${key}`)
+    const url_base = "https://localhost:3001/rickandmorty";
+
+    fetch(`${url_base}/character/${character}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.name) {

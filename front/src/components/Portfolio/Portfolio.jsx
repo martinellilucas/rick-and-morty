@@ -5,10 +5,6 @@ import rick from "../assets/images/rick&morty.png";
 import zaida from "../assets/images/zaida.png";
 
 class Portfolio extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className={style.container}>
