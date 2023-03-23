@@ -14,11 +14,10 @@ export const removeFavorite = (id) => {
 };
 
 export const addCharDetail = (detailId) => {
-  const url_base = "https://be-a-rym.up.railway.app/api";
-  const key = "a4323caea686.b6efbb9249e0d434a6e8";
+  const url_base = "https://localhost:3001/rickandmorty";
 
   return (dispatch) => {
-    fetch(`${url_base}/character/${detailId}?key=${key}`)
+    fetch(`${url_base}/detail/${detailId}`)
       .then((res) => res.json())
       .then((char) => {
         dispatch({ type: ADD_CHAR_DETAIL, payload: char });
