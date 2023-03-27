@@ -4,16 +4,16 @@ const URL = "https://be-a-rym.up.railway.app/api";
 
 const successHandler = (response, res) => {
   const { id, species, gender, image, name } = response.data;
-  res.writeHead(200, { "Content-Type": "application/json" });
-  res.end(JSON.stringify({ id, species, gender, image, name }));
+
+  res.status(200).json({ id, species, gender, image, name });
 };
 
 const errorHandler = (error, res) => {
-  res.writeHead(500, { "Content-Type": "text/plain" });
-  res.end(error.message);
+  res.status(500).json({ error: error.message });
 };
 
-const getCharById = (res, id) => {
+const getCharById = (req, res) => {
+  const { id } = req.params;
   axios
     .get(`${URL}/character/${id}?key=${KEY}`)
     .then((data) => successHandler(data, res))
