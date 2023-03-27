@@ -1,9 +1,10 @@
 const axios = require("axios");
-const { KEY, URL } = process.env;
+const KEY = "a4323caea686.b6efbb9249e0d434a6e8";
+const URL = "https://be-a-rym.up.railway.app/api";
 
 const successHandler = (response, res) => {
-  const { id, species, gender, image, name } = response.data;
-  res.writeHead(200, { "Content-Type": "aplication/json" });
+  const { id, species, gender, image, name, status, origin } = response.data;
+  res.writeHead(200, { "Content-Type": "application/json" });
   res.end(JSON.stringify({ id, name, species, gender, status, origin, image }));
 };
 

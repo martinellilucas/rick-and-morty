@@ -14,7 +14,7 @@ export const removeFavorite = (id) => {
 };
 
 export const addCharDetail = (detailId) => {
-  const url_base = "https://localhost:3001/rickandmorty";
+  const url_base = "http://localhost:3001/rickandmorty";
 
   return (dispatch) => {
     fetch(`${url_base}/detail/${detailId}`)

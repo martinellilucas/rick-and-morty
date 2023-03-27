@@ -38,7 +38,7 @@ function App() {
   const [characters, setCharacters] = useState([]);
 
   const onSearch = (character) => {
-    const url_base = "https://localhost:3001/rickandmorty";
+    const url_base = "http://localhost:3001/rickandmorty";
 
     fetch(`${url_base}/onsearch/${character}`)
       .then((res) => res.json())
