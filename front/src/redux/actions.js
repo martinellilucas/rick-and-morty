@@ -3,6 +3,16 @@ import axios from "axios";
 export const ADD_CHAR_DETAIL = "ADD_CHAR_DETAIL";
 export const CLEAN_DETAIL = "CLEAN_DETAIL";
 export const GET_FAVORITES = "GET_FAVORITES";
+export const FILTER = "FILTER";
+export const ORDER = "ORDER";
+
+export const filterCards = (gender) => {
+  return { type: FILTER, payload: gender };
+};
+
+export const orderCards = (forma) => {
+  return { type: ORDER, payload: forma };
+};
 
 export const getFavorites = () => {
   return async function (dispatch) {
