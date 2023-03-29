@@ -2,6 +2,7 @@ import style from "./Card.module.css";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
+import { getFavorites } from "../../redux/actions";
 import axios from "axios";
 
 export default function Card({ id, name, species, gender, image, close }) {
@@ -9,24 +10,26 @@ export default function Card({ id, name, species, gender, image, close }) {
   const dispatch = useDispatch();
   const [isFav, setIsFav] = useState(false);
 
-  const addFavorite = (character) => {
-    axios
-      .post("http://localhost:3001/rickandmorty/fav", character)
-      .then((res) => console.log("ok"));
+  const addFavorite = async (character) => {
+    await axios.post("http://localhost:3001/rickandmorty/fav", character);
+    dispatch(getFavorites());
   };
-  const removeFavorite = (id) => {};
+  const removeFavorite = async (id) => {
+    await axios.delete(`http://localhost:3001/rickandmorty/fav/${id}`);
+    dispatch(getFavorites());
+  };
   useEffect(() => {
     favorites.forEach((fav) => {
       if (fav.id === id) {
         setIsFav(true);
       }
     });
-  }, [id, favorites]);
+  }, [favorites]);
 
   const handleFav = () => {
     if (isFav) {
       setIsFav(false);
-      dispatch(removeFavorite(id));
+      removeFavorite(id);
     }
     if (!isFav) {
       setIsFav(true);

@@ -2,6 +2,7 @@ import {
   ADD_CHAR_DETAIL,
   ADD_FAVORITE,
   CLEAN_DETAIL,
+  GET_FAVORITES,
   REMOVE_FAVORITE,
 } from "./actions";
 
@@ -22,6 +23,8 @@ const reducer = (state = initialState, action) => {
       return { ...state, charDetail: { ...action.payload } };
     case CLEAN_DETAIL:
       return { ...state, charDetail: {} };
+    case GET_FAVORITES:
+      return { ...state, myFavorites: action.payload };
     default:
       return { ...state };
   }
