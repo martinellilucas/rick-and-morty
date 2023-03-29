@@ -13,11 +13,14 @@ const errorHandler = (error, res) => {
 };
 
 const getCharById = (req, res) => {
-  const { id } = req.params;
-  axios
-    .get(`${URL}/character/${id}?key=${KEY}`)
-    .then((data) => successHandler(data, res))
-    .catch((error) => errorHandler(error, res));
+  try {
+    const { id } = req.params;
+    axios
+      .get(`${URL}/character/${id}?key=${KEY}`)
+      .then((data) => successHandler(data, res));
+  } catch (error) {
+    errorHandler(error, res);
+  }
 };
 
 module.exports = getCharById;
