@@ -33,7 +33,7 @@ const reducer = (state = initialState, action) => {
             }),
           ],
         };
-      else
+      if (action.payload === "Descendente")
         return {
           ...state,
           myFavorites: [
@@ -42,7 +42,11 @@ const reducer = (state = initialState, action) => {
             }),
           ],
         };
-
+      else
+        return {
+          ...state,
+          myFavorites: [...state.allCharacters],
+        };
     case ADD_CHAR_DETAIL:
       return { ...state, charDetail: { ...action.payload } };
     case CLEAN_DETAIL:
