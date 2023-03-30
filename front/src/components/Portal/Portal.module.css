@@ -42,7 +42,7 @@
     radial-gradient(circle at 50% 50%, #fdfeb4 100%, #fdfeb4 100%);
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .container {
     height: 45vh;
   }

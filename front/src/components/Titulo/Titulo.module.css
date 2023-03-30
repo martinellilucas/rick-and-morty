@@ -43,54 +43,92 @@
   -webkit-text-stroke: 0.4em black;
   z-index: 23;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1800px) {
   .title {
-    width: min-content;
-    font-size: 8em;
-    left: 16%;
+    left: 32%;
   }
   .middle {
-    width: min-content;
-    font-size: 8em;
-    left: 16%;
+    left: 32%;
   }
   .bottom {
-    width: min-content;
-    font-size: 8em;
-    left: 16%;
+    left: 32%;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1700px) {
+  .title {
+    left: 30%;
+  }
+  .middle {
+    left: 30%;
+  }
+  .bottom {
+    left: 30%;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .title {
+    left: 28%;
+  }
+  .middle {
+    left: 28%;
+  }
+  .bottom {
+    left: 28%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .title {
+    left: 23%;
+  }
+  .middle {
+    left: 23%;
+  }
+  .bottom {
+    left: 23%;
+  }
+}
+@media screen and (max-width: 900px) {
   .title {
     width: min-content;
     font-size: 6em;
-    left: 15%;
+    left: 19%;
   }
   .middle {
     width: min-content;
     font-size: 6em;
-    left: 15%;
+    left: 19%;
   }
   .bottom {
     width: min-content;
     font-size: 6em;
-    left: 15%;
+    left: 19%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .title {
+    width: min-content;
+    font-size: 4em;
+    left: 20%;
+  }
+  .middle {
+    width: min-content;
+    font-size: 4em;
+    left: 20%;
+  }
+  .bottom {
+    width: min-content;
+    font-size: 4em;
+    left: 20%;
   }
 }
 @media screen and (max-width: 500px) {
   .title {
-    width: min-content;
-    font-size: 4em;
-    left: 20%;
+    left: 11%;
   }
   .middle {
-    width: min-content;
-    font-size: 4em;
-    left: 20%;
+    left: 11%;
   }
   .bottom {
-    width: min-content;
-    font-size: 4em;
-    left: 20%;
+    left: 11%;
   }
 }
