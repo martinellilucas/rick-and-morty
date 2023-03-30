@@ -6,9 +6,11 @@ import style from "./Cards.module.css";
 
 export default function Cards({ characters, close }) {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getFavorites());
   }, []);
+
   return (
     <div className={style.cardsContainer}>
       {characters.map(({ id, name, species, gender, image }) => {
