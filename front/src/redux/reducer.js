@@ -11,25 +11,24 @@ const initialState = { myFavorites: [], charDetail: {}, allCharacters: [] };
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FILTER:
-      return {
-        ...state,
-        myFavorites: [
-          ...state.myFavorites.filter((char) => char.gender === action.payload),
-        ],
-      };
-    /*  return {
-        ...state,
-        myFavorites: myFavorites.filter(
-          (char) => char.gender === action.payload
-        ),
-      }; */
+      if (action.payload === "None")
+        return { ...state, myFavorites: [...state.allCharacters] };
+      else
+        return {
+          ...state,
+          myFavorites: [
+            ...state.allCharacters.filter(
+              (char) => char.gender === action.payload
+            ),
+          ],
+        };
 
     case ORDER:
       if (action.payload === "Ascendente")
         return {
           ...state,
           myFavorites: [
-            ...state.myFavorites.sort((a, b) => {
+            ...state.allCharacters.sort((a, b) => {
               return a.id - b.id;
             }),
           ],
@@ -38,7 +37,7 @@ const reducer = (state = initialState, action) => {
         return {
           ...state,
           myFavorites: [
-            ...state.myFavorites.sort((a, b) => {
+            ...state.allCharacters.sort((a, b) => {
               return b.id - a.id;
             }),
           ],
@@ -49,7 +48,11 @@ const reducer = (state = initialState, action) => {
     case CLEAN_DETAIL:
       return { ...state, charDetail: {} };
     case GET_FAVORITES:
-      return { ...state, myFavorites: action.payload };
+      return {
+        ...state,
+        myFavorites: [...state.allCharacters],
+        allCharacters: [...action.payload],
+      };
     default:
       return { ...state };
   }

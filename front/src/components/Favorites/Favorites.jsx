@@ -28,7 +28,9 @@ class Favorites extends React.Component {
             name="filtro"
             onChange={this.props.handleFilter}
           >
-            <option className={style.menuOption}>Filter</option>
+            <option className={style.menuOption} value="None">
+              None
+            </option>
             <option className={style.menuOption} value="Male">
               Male
             </option>
